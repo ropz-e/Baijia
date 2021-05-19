@@ -59,15 +59,15 @@ from email.header import Header
 
 # 发送QQ邮箱验证码, 参数为收件箱地址和随机生成的验证码
 def send_email(receiver, ecode):
-    sender = 'WoniuNote <15903523@qq.com>'  # 你的邮箱账号和发件者签名
+    sender = 'BaiJia <15903523@qq.com>'  # 你的邮箱账号和发件者签名
     # 定义发送邮件的内容，支持HTML标签和CSS样式
-    content = f"<br/>欢迎注册蜗牛笔记博客系统账号，您的邮箱验证码为：" \
+    content = f"<br/>欢迎注册佰嘉教育系统账号，您的邮箱验证码为：" \
         f"<span style='color: red; font-size: 20px;'>{ecode}</span>，" \
         f"请复制到注册窗口中完成注册，感谢您的支持。<br/>"
     # 实例化邮件对象，并指定邮件的关键信息
     message = MIMEText(content, 'html', 'utf-8')
     # 指定邮件的标题，同样使用utf-8编码
-    message['Subject'] = Header('蜗牛笔记的注册验证码', 'utf-8')
+    message['Subject'] = Header('佰家教育的注册验证码', 'utf-8')
     message['From'] = sender    # 指定发件人信息
     message['To'] = receiver    # 指定收件人邮箱地址
 

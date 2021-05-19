@@ -90,7 +90,7 @@ def do_upload():
 
     suffix = file.filename.split('.')[-1]  # 取得文件的后缀名
     # 也可以根据文件的后缀名对文件类型进行过滤，如：
-    if suffix.lower() not in ['jpg', 'jpeg', 'png', 'rar', 'zip', 'doc', 'docx']:
+    if suffix.lower() not in ['jpg', 'jpeg', 'png', 'rar', 'zip', 'doc', 'docx','mp4']:
         return 'Invalid'
 
     # 将文件保存到某个目录中
